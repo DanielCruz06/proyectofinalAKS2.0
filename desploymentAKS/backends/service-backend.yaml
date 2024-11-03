@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: myapp-namespace  # Asegúrate de que el namespace es el mismo
+spec:
+  selector:
+    app: backend-service
+  ports:
+    - protocol: TCP
+      port: 5001           # Puerto en el que el servicio estará disponible en el clúster
+      targetPort: 5001      # Puerto en el contenedor
+  type: LoadBalancer           # Cambia a LoadBalancer si necesitas acceso externo
