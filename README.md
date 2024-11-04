@@ -1,10 +1,16 @@
 # Aplicación de productos
 Se realiza una aplicación de productos sencilla para la demostración cercana de una app en producción.
 
+ Si no tiene docker puede visitar la siguiente página para su instalación:
+--
+**Instalar Docker Server**  [dockerDocs](https://docs.docker.com/engine/install/)
+
+**Instalar Docker Desktop** [DockerDocsDesktop](https://docs.docker.com/desktop/)
+
 # Despliegue de la app
 
-# Despliegue de images y contenedores
-
+ Despliegue de images y contenedores
+--
 1. Opción uno, desplegar por Docker CLI
     1. Descargar el árbol de todas las carpetas, debes tener la siguiente estructura:
     
@@ -61,4 +67,5 @@ Se realiza una aplicación de productos sencilla para la demostración cercana d
         
         ![alt text](image-9.png)
 
-# Despliegue en Kubernetes
+ Despliegue en Kubernetes
+--
