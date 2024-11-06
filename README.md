@@ -174,3 +174,29 @@ aplicar comando ```kubectl get all -n myapp-namespace``` para extraer el externa
 http:13.71.109.140:5001/login
 ![alt text](image-31.png)
 
+Conexión a Base de Datos usando DBeaver
+---
+1. Instalar DBeaver para realizar la instalación visite el siguiente sitio web :  [DownloadDBeaver](https://dbeaver.io/download/)
+
+2. Dar clic en nueva conexión y seleccionar PostgreSQl:
+
+![alt text](image-33.png)
+
+3. Ingresar Credenciales:
+    * User: myappaks
+    * Pwd:  josecruz06
+    * DataBase: appdb
+    * Host: 52.140.18.235
+
+Las credenciales se encuentra en la siguiente ruta del repositorio: db/init.sql
+El host se obtiene del external IP de microservicio de base de datos:
+
+![alt text](image-32.png)
+
+4. Probar conexión y conectar:
+
+![alt text](image-34.png)
+
+Debe aparecer algo similar a la siguiente imagen:
+
+![alt text](image-35.png)
