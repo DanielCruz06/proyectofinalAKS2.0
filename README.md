@@ -162,4 +162,15 @@ aplicar comando ```kubectl get all -n myapp-namespace``` para extraer el externa
 ![alt text](image-26.png)
 
     3. Desplegar sitio en docker hub para ello es necesario que se aplique nuevamente el comando 'docker build -d -p 5001:5001 dcruz06/webapp:latest .' 
-    Seguido del comando 'docker push dcruz06/webapp:latest'. Esto para que el sitio quede dockerizado y cargado en el hub para posteriormente ser desplegado en kubernetes
+    Seguido del comando 'docker push dcruz06/webapp:latest'. Esto para que el sitio quede dockerizado y cargado en el hub para posteriormente ser desplegado en kubernetes.
+
+    4. Desplegar el webapp, una vez modificado y cargado al docker hub toda la imagen, se debe cargar los archivos manifiestos del microservicio webapp al AKS y desplegar kubectl apply -f deployment-webapp.yaml y kubectl apply -f service-webapp.yaml. Una vez exponga ambos microservicios aplicar el siguiente comando kubectl get all -n myapp-namespace para obtener la información de los pods, deployment y services de ambos microservicios.
+
+![alt text](image-29.png)
+
+    5. Ingreso al Sitio desplegado, para el ingreso al webapp debe de copiar el external IP y exponer el puerto añadido, es decir que para este caso el link del sitio es http:13.71.109.140:5001
+![alt text](image-30.png)
+
+http:13.71.109.140:5001/login
+![alt text](image-31.png)
+
