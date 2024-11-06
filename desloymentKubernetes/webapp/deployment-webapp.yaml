@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-combined
+  namespace: myapp-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: webapp
+          image: dcruz06/webapp:latest
+          ports:
+            - containerPort: 5001  # Puerto en el que el contenedor escucha
+          env:
+            - name: DATABASE_HOST
+              value: "postgres-db-service"
+            - name: DATABASE_USER
+              value: "myappaks"
+            - name: DATABASE_PASSWORD
+              value: "josecruz06"
+            - name: DATABASE_NAME
+              value: "appdb"
+            - name: FLASK_ENV
+              value: "production"
