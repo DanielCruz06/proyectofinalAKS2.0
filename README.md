@@ -144,7 +144,8 @@ Deployment
 --
 Para este punto se debe tener los archivos manifiestos de kubernetes ```.yaml``` que se encuentran en este repositorio, se debe desplegar en el siguiente orden. Los archivos los puedes descargar directamente del repositorio con un git clone o en .zip y cargadlos a la nube usando la opción de **'Manage Files'**:
 
-    ![alt text](image-28.png)
+![alt text](image-28.png)
+
 
     1. Carpeta DB (Aplicar en el siguiente orden):
         *   deployment-db.yaml
